@@ -8,3 +8,4 @@ Last Modified: November 10, 2016 by Winnie Chung
   
 Revision History:  
 Nov. 10: Initial commit  
+Nov. 10: Edited tile sprites  
