@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COMP305 Assignment 3.CSharp", "COMP305 Assignment 3.CSharp.csproj", "{C164E272-F92A-1E39-138D-249ACCD7C081}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COMP305 Assignment 3.CSharp.Editor", "COMP305 Assignment 3.CSharp.Editor.csproj", "{A693A29E-CB91-F097-CF5E-B31AD2D82511}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C164E272-F92A-1E39-138D-249ACCD7C081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C164E272-F92A-1E39-138D-249ACCD7C081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C164E272-F92A-1E39-138D-249ACCD7C081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C164E272-F92A-1E39-138D-249ACCD7C081}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A693A29E-CB91-F097-CF5E-B31AD2D82511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A693A29E-CB91-F097-CF5E-B31AD2D82511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A693A29E-CB91-F097-CF5E-B31AD2D82511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A693A29E-CB91-F097-CF5E-B31AD2D82511}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
