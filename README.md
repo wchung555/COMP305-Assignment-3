@@ -10,3 +10,4 @@ Revision History:
 Nov. 10: Initial commit  
 Nov. 10: Edited tile sprites  
 Nov. 13: Added initial WebGL build  
+Nov. 17: Added horse and more obstacles  

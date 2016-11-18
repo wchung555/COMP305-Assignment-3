@@ -102,6 +102,7 @@
     <Compile Include="Assets\_Imported Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Horse\SoftAlpha.shader" />
     <None Include="Assets\_Imported Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\_Imported Assets\Utility\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
   </ItemGroup>
