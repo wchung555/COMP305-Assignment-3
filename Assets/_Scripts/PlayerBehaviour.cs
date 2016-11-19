@@ -1,9 +1,10 @@
 ﻿// File name: PlayerBehaviour.cs
 // Description: Defines how the player's avatar interacts with other game objects
 // Created by Winnie Chung on Nov. 17, 2016
-// Last modified by Winnie Chung on Nov. 17, 2016
+// Last modified by Winnie Chung on Nov. 18, 2016
 // Revision history:
 // Nov. 17: File created
+// Nov. 17: Tag for horse added
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -42,19 +43,23 @@ public class PlayerBehaviour : MonoBehaviour
 
     void OnTriggerEnter(Collider hit)
     {
+        // if treasure was collected, increase score and play treasure sound
         if (hit.gameObject.CompareTag("treasure"))
         {
             this._score += 100;
             Destroy(hit.gameObject);
             treasureSound.Play();
         }
-        else if (hit.gameObject.CompareTag("obstacle"))
+        // if hit by obstacle or horse, decrease lives and play sound
+        else if (hit.gameObject.CompareTag("obstacle") || hit.gameObject.CompareTag("horse"))
         {
             if (this._lives > 0)
             {
-                hurtSound.Play();
+                if (hit.gameObject.CompareTag("obstacle"))
+                    hurtSound.Play();
                 this._lives--;
             }
+            // if ran out of lives, play dead sound
             else
             {
                 deadSound.Play();
