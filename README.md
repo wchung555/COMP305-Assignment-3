@@ -12,3 +12,4 @@ Nov. 10: Edited tile sprites
 Nov. 13: Added initial WebGL build  
 Nov. 17: Added horse and more obstacles  
 Nov. 18: Added horse sounds and preliminary start/game over labels  
+Nov. 19: Added mini map  
