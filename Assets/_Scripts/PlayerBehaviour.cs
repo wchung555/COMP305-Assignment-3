@@ -1,10 +1,11 @@
 ﻿// File name: PlayerBehaviour.cs
 // Description: Defines how the player's avatar interacts with other game objects
 // Created by Winnie Chung on Nov. 17, 2016
-// Last modified by Winnie Chung on Nov. 18, 2016
+// Last modified by Winnie Chung on Nov. 20, 2016
 // Revision history:
 // Nov. 17: File created
 // Nov. 17: Tag for horse added
+// Nov. 20: Moved score, lives to GameController
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,27 +19,18 @@ public class PlayerBehaviour : MonoBehaviour
     public AudioSource treasureSound;
 
     // private instance variables
-    private int _score, _lives;
-    private Text _scoreText, _livesText;
+    private GameController _controller;
 
     // Use this for initialization
     void Start()
     {
-        this._score = 0;
-        this._lives = 100;
-
-        this._scoreText = GameObject.Find("score").GetComponent<Text>();
-        this._livesText = GameObject.Find("lives").GetComponent<Text>();
+        this._controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     }
 
-    // Update is called once per frame (for physics)
-    void FixedUpdate()
+    // Update is called once per frame
+    void Update()
     {
-        if (this._lives > 0)
-        {
-            this._scoreText.text = "Score: " + this._score;
-            this._livesText.text = "Lives: " + this._lives;
-        }
+
     }
 
     void OnTriggerEnter(Collider hit)
@@ -46,24 +38,30 @@ public class PlayerBehaviour : MonoBehaviour
         // if treasure was collected, increase score and play treasure sound
         if (hit.gameObject.CompareTag("treasure"))
         {
-            this._score += 100;
+            this._controller.GetTreasure();
             Destroy(hit.gameObject);
             treasureSound.Play();
         }
         // if hit by obstacle or horse, decrease lives and play sound
         else if (hit.gameObject.CompareTag("obstacle") || hit.gameObject.CompareTag("horse"))
         {
-            if (this._lives > 0)
+            if (this._controller.Lives > 0)
             {
                 if (hit.gameObject.CompareTag("obstacle"))
                     hurtSound.Play();
-                this._lives--;
+                this._controller.HitEnemy();
             }
             // if ran out of lives, play dead sound
             else
             {
                 deadSound.Play();
+                Destroy(gameObject);
             }
+        }
+        else if (hit.gameObject.CompareTag("death"))
+        {
+            this._controller.EndGame(true);
+            deadSound.Play();
         }
     }
 }

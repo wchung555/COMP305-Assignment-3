@@ -102,7 +102,9 @@
     <Compile Include="Assets\_Imported Assets\Utility\TimedObjectDestructor.cs" />
     <Compile Include="Assets\_Imported Assets\Utility\WaypointCircuit.cs" />
     <Compile Include="Assets\_Imported Assets\Utility\WaypointProgressTracker.cs" />
+    <Compile Include="Assets\_Scripts\GameController.cs" />
     <Compile Include="Assets\_Scripts\HorseBehaviour.cs" />
+    <Compile Include="Assets\_Scripts\MenuController.cs" />
     <Compile Include="Assets\_Scripts\PlayerBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
